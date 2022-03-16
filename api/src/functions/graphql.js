@@ -12,6 +12,9 @@ export const handler = createGraphQLHandler({
   directives,
   sdls,
   services,
+  cors: {
+    origin: 'ec2-34-211-173-191.us-west-2.compute.amazonaws.com:8911',
+  },
   onException: () => {
     // Disconnect from your database with an unhandled exception.
     db.$disconnect()
